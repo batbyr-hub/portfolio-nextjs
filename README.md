@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📌 Portfolio Website – Batbayar Altanbagana
 
-## Getting Started
+A modern, responsive software engineering portfolio built with Next.js (App Router) and Tailwind CSS, showcasing projects, a resume, and a contact form with server-side API handling.
 
-First, run the development server:
+🔗 Live Demo: https://portfolio-nextjs-nu-bay.vercel.app/
 
-```bash
+📄 Resume: https://portfolio-nextjs-nu-bay.vercel.app/resume
+
+🚀 Tech Stack
+
+Frontend: Next.js 14, React, TypeScript
+
+Styling: Tailwind CSS, Dark Mode
+
+Backend (Light): Next.js API Routes
+
+Deployment: Vercel
+
+Tooling: Git, GitHub
+
+✨ Features
+
+Responsive portfolio layout
+
+Project listing with dynamic routes (/projects/[slug])
+
+SEO optimization (metadata & dynamic titles)
+
+Dark mode support
+
+Resume page with embedded PDF + download
+
+Contact form with server-side API route
+
+Clean, scalable project structure
+
+📂 Project Structure
+app/
+├── page.tsx                # Home page
+├── projects/               # Project listing & dynamic detail pages
+├── resume/                 # Resume page
+├── contact/                # Contact form page
+├── api/contact/route.ts    # API route for form submission
+components/                 # Reusable UI components
+data/                       # Project data
+public/                     # Static assets (resume, images)
+
+🧠 Key Technical Highlights
+
+Uses Next.js App Router with server & client components
+
+Dynamic routing with SEO-friendly metadata
+
+API routes demonstrate backend logic without external services
+
+Tailwind-based design system with light/dark themes
+
+Production-ready deployment on Vercel
+
+🛠️ Getting Started (Local Development)
+git clone https://github.com/batbyr-hub/portfolio-nextjs.git
+cd portfolio-nextjs
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📬 Contact Form (Phase 1)
 
-## Learn More
+Form submits data to /api/contact
 
-To learn more about Next.js, take a look at the following resources:
+Server logs submission (Phase 1)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Designed to be extended with an email service or a database later
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔮 Future Enhancements (Phase 2)
 
-## Deploy on Vercel
+Email delivery (Resend / EmailJS)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Backend integration (FastAPI or Django)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Admin dashboard for content
+
+Analytics & performance tracking
+
+Custom domain
+
+👤 Author
+
+Batbayar Altanbagana
+Software Engineer
+📍 Denver, CO
+🌐 Portfolio: https://portfolio-nextjs-nu-bay.vercel.app/
+
+💼 GitHub: https://github.com/batbyr-hub
