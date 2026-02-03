@@ -1,43 +1,15 @@
 "use client";
 
+import { sendEmail } from "../actions/sendEmail";
 import { useState } from "react";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
-
-    const formData = new FormData(e.currentTarget);
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        message: formData.get("message"),
-      }),
-    });
-
-    if (res.ok) {
-      setStatus("Message sent successfully ✅");
-      e.currentTarget.reset();
-    } else {
-      setStatus("Something went wrong ❌");
-    }
-
-    setLoading(false);
-  }
-
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-6">Contact Me</h1>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form action={sendEmail} className="space-y-4">
         <input
           name="name"
           placeholder="Your Name"
