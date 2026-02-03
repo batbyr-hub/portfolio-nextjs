@@ -40,7 +40,7 @@ export default function ContactPage() {
           {loading ? "Sending..." : "Send Message"}
         </button>
 
-        {status && <p className="text-sm mt-2">{status}</p>}
+        {/* {status && <p className="text-sm mt-2">{status}</p>} */}
       </form>
     </div>
   );
