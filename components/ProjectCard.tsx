@@ -7,27 +7,41 @@ type Props = {
 
 export default function ProjectCard({ project }: Props) {
   return (
-    <div className="border rounded-lg p-6 hover:shadow-md transition">
-      <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-      <p className="text-gray-700 leading-relaxed mb-6">{project.description}</p>
+    <article className="glass-panel group flex h-full flex-col rounded-[1.75rem] p-6">
+      <div className="mb-6 flex items-start justify-between gap-4">
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
+            {project.category}
+          </p>
+          <h2 className="text-2xl font-semibold text-white">{project.title}</h2>
+        </div>
+        <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
+          {project.year}
+        </span>
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <p className="body-muted mb-6 text-base leading-7">{project.description}</p>
+
+      <div className="mb-6 flex flex-wrap gap-2">
         {project.tech.map((tech) => (
           <span
             key={tech}
-            className="text-sm bg-gray-100 px-2 py-1 rounded"
+            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70"
           >
             {tech}
           </span>
         ))}
       </div>
 
-      <Link
-        href={`/projects/${project.slug}`}
-        className="text-blue-600 font-medium"
-      >
-        View details →
-      </Link>
-    </div>
+      <div className="mt-auto flex items-center justify-between gap-4 border-t border-white/10 pt-5">
+        <p className="max-w-[18rem] text-sm text-white/45">{project.outcome}</p>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="rounded-full border border-white/10 px-4 py-2 text-sm text-white group-hover:border-[rgba(215,168,110,0.45)]"
+        >
+          View project
+        </Link>
+      </div>
+    </article>
   );
 }

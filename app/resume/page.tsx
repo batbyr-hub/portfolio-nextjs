@@ -1,33 +1,39 @@
 export const metadata = {
   title: "Resume | Batbayar Altanbagana",
-  description: "Software Engineer resume – Django, React, PostgreSQL, Node.js, AWS",
+  description:
+    "Software Engineer resume - Django, React, PostgreSQL, Node.js, AWS",
   keywords: ["Resume", "Software Engineer", "Django", "React", "Portfolio"],
 };
 
 export default function ResumePage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold mb-6">Resume</h1>
+    <section className="flex w-full flex-col gap-6">
+      <div className="glass-panel rounded-[2rem] px-6 py-10 sm:px-8 sm:py-12">
+        <p className="eyebrow mb-4">Resume</p>
+        <h1 className="section-title mb-4">Experience, systems thinking, and product-focused engineering.</h1>
+        <p className="body-muted max-w-3xl text-base leading-8">
+          Download the PDF version or preview it below. The resume is focused on
+          backend development, full-stack delivery, and database-driven products.
+        </p>
+        <a
+          href="/resume/Batbayar_Altanbagana_Software_Engineer_Resume.pdf"
+          download
+          className="accent-button mt-8 inline-flex rounded-full px-6 py-3 text-sm font-semibold"
+        >
+          Download PDF
+        </a>
+      </div>
 
-      {/* Download Button */}
-      <a
-        href="/resume/Batbayar_Altanbagana_Software_Engineer_Resume.pdf"
-        download
-        className="inline-block mb-6 px-6 py-3 bg-black text-white rounded-lg hover:opacity-80"
-      >
-        Download Resume (PDF)
-      </a>
-
-      {/* PDF Embed */}
-      <div className="w-full h-[800px] border rounded-lg overflow-hidden">
+      <div className="glass-panel overflow-hidden rounded-[2rem] p-3 sm:p-4">
         <iframe
           src="/resume/Batbayar_Altanbagana_Software_Engineer_Resume.pdf"
-          className="w-full h-full"
+          title="Batbayar Altanbagana resume"
+          className="h-[70vh] w-full rounded-[1.4rem] bg-white"
         />
-        <p className="mt-4 text-sm text-gray-600">
-  If the resume doesn’t display correctly, please use the download button above.
-</p>
+        <p className="body-muted px-3 pb-2 pt-5 text-sm">
+          If the preview does not load in your browser, use the download button above.
+        </p>
       </div>
-    </div>
-  )
+    </section>
+  );
 }

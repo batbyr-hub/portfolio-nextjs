@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0d10;
+  --foreground: #f5efe1;
+  --muted: #b8b0a4;
+  --border: rgba(245, 239, 225, 0.12);
+  --accent: #d7a86e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(215, 168, 110, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(103, 126, 234, 0.1), transparent 24%),
+    linear-gradient(180deg, #0b0d10 0%, #11141a 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+}
+
+a,
+button,
+input,
+textarea,
+iframe {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+::selection {
+  background: rgba(215, 168, 110, 0.35);
+  color: #fff8ee;
+}
+
+.site-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-shell::before,
+.site-shell::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+  border-radius: 9999px;
+  filter: blur(90px);
+}
+
+.site-shell::before {
+  top: 10rem;
+  left: -6rem;
+  height: 18rem;
+  width: 18rem;
+  background: rgba(215, 168, 110, 0.14);
+}
+
+.site-shell::after {
+  right: -4rem;
+  bottom: 8rem;
+  height: 16rem;
+  width: 16rem;
+  background: rgba(92, 114, 214, 0.14);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.display-title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(3.4rem, 9vw, 7.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+}
+
+.section-title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.body-muted {
+  color: #b8b0a4;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(24, 27, 33, 0.9), rgba(15, 17, 22, 0.88));
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-position: center;
+  background-size: 44px 44px;
+}
+
+.accent-button {
+  background: var(--foreground);
+  color: #11141a;
+}
+
+.accent-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(255, 248, 238, 0.15);
+}
+
+.ghost-button {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.ghost-button:hover {
+  border-color: rgba(215, 168, 110, 0.45);
+  background: rgba(255, 255, 255, 0.03);
 }
