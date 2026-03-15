@@ -26,7 +26,7 @@ export default function ResumePage() {
 
       <div className="glass-panel overflow-hidden rounded-[2rem] p-3 sm:p-4">
         <iframe
-          src="/resume/Batbayar_Altanbagana_Software_Engineer_Resume.pdf"
+          src="/resume/Batbayar_Altanbagana_Software_Engineer_Resume1.pdf"
           title="Batbayar Altanbagana resume"
           className="h-[70vh] w-full rounded-[1.4rem] bg-white"
         />

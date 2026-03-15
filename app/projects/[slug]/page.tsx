@@ -43,6 +43,15 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="mb-8 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-white/45">
           <span className="text-[var(--accent)]">{project.category}</span>
           <span>{project.year}</span>
+          <span
+            className={`rounded-full px-3 py-1 text-[11px] font-medium normal-case tracking-normal ${
+              project.status === "In Progress"
+                ? "bg-amber-500/12 text-amber-200"
+                : "bg-emerald-500/12 text-emerald-200"
+            }`}
+          >
+            {project.status}
+          </span>
         </div>
         <h1 className="section-title mb-5">{project.title}</h1>
         <p className="body-muted max-w-3xl text-base leading-8">

@@ -32,6 +32,20 @@ export const metadata: Metadata = {
     "Resume",
   ],
   authors: [{ name: "Batbayar Altanbagana" }],
+  openGraph: {
+    title: "Batbayar Altanbagana | Software Engineer Portfolio",
+    description:
+      "Projects, experience, and technical work in backend and full-stack development.",
+    url: "https://batbyr.com",
+    siteName: "Batbayar Altanbagana Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

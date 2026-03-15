@@ -15,9 +15,20 @@ export default function ProjectCard({ project }: Props) {
           </p>
           <h2 className="text-2xl font-semibold text-white">{project.title}</h2>
         </div>
-        <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
-          {project.year}
-        </span>
+        <div className="flex flex-col items-end gap-2">
+          <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
+            {project.year}
+          </span>
+          <span
+            className={`rounded-full px-3 py-1 text-[11px] font-medium ${
+              project.status === "In Progress"
+                ? "bg-amber-500/12 text-amber-200"
+                : "bg-emerald-500/12 text-emerald-200"
+            }`}
+          >
+            {project.status}
+          </span>
+        </div>
       </div>
 
       <p className="body-muted mb-6 text-base leading-7">{project.description}</p>
