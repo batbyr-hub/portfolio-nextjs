@@ -1,96 +1,52 @@
-📌 Portfolio Website – Batbayar Altanbagana
+## 🚀 Portfolio Website (Next.js)
 
-A modern, responsive software engineering portfolio built with Next.js (App Router) and Tailwind CSS, showcasing projects, a resume, and a contact form with server-side API handling.
+A modern and responsive personal portfolio website built with Next.js to showcase my projects, technical skills, and professional experience as a Full-Stack Software Engineer.
 
-🔗 Live Demo: https://portfolio-nextjs-nu-bay.vercel.app/
+This project demonstrates my ability to design and develop scalable web applications using modern frontend technologies and best practices.
 
-📄 Resume: https://portfolio-nextjs-nu-bay.vercel.app/resume
+---
 
-🚀 Tech Stack
+## ✨ Features
 
-Frontend: Next.js 14, React, TypeScript
+- ⚡ Fast and optimized performance with Next.js
+- 📱 Fully responsive design (mobile-first)
+- 🧩 Modular and reusable component architecture
+- 🎯 Clean UI/UX for professional presentation
+- 🌐 SEO-friendly structure
+- 📂 Project showcase section
+- 📞 Contact / social links integration
 
-Styling: Tailwind CSS, Dark Mode
+---
 
-Backend (Light): Next.js API Routes
+## 🛠️ Tech Stack
 
-Deployment: Vercel
+- **Frontend:** Next.js, React, JavaScript/TypeScript
+- **Styling:** CSS / Tailwind (if applicable)
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
 
-Tooling: Git, GitHub
+---
 
-✨ Features
+## 📌 Purpose
 
-Responsive portfolio layout
+This portfolio serves as a central hub to present my work, including:
 
-Project listing with dynamic routes (/projects/[slug])
+- Full-stack web applications (Django, React)
+- REST API development
+- Database design (PostgreSQL, MongoDB)
+- Real-world projects from professional experience
 
-SEO optimization (metadata & dynamic titles)
+---
 
-Dark mode support
+## 🚀 Live Demo
 
-Resume page with embedded PDF + download
+👉 https://www.batbyr.com/
 
-Contact form with server-side API route
+---
 
-Clean, scalable project structure
+## 📫 Contact
 
-📂 Project Structure
-app/
-├── page.tsx                # Home page
-├── projects/               # Project listing & dynamic detail pages
-├── resume/                 # Resume page
-├── contact/                # Contact form page
-├── api/contact/route.ts    # API route for form submission
-components/                 # Reusable UI components
-data/                       # Project data
-public/                     # Static assets (resume, images)
+Feel free to connect with me:
 
-🧠 Key Technical Highlights
-
-Uses Next.js App Router with server & client components
-
-Dynamic routing with SEO-friendly metadata
-
-API routes demonstrate backend logic without external services
-
-Tailwind-based design system with light/dark themes
-
-Production-ready deployment on Vercel
-
-🛠️ Getting Started (Local Development)
-git clone https://github.com/batbyr-hub/portfolio-nextjs.git
-cd portfolio-nextjs
-npm install
-npm run dev
-
-
-Open: http://localhost:3000
-
-📬 Contact Form (Phase 1)
-
-Form submits data to /api/contact
-
-Server logs submission (Phase 1)
-
-Designed to be extended with an email service or a database later
-
-🔮 Future Enhancements (Phase 2)
-
-Email delivery (Resend / EmailJS)
-
-Backend integration (FastAPI or Django)
-
-Admin dashboard for content
-
-Analytics & performance tracking
-
-Custom domain
-
-👤 Author
-
-Batbayar Altanbagana
-Software Engineer
-📍 Denver, CO
-🌐 Portfolio: https://portfolio-nextjs-nu-bay.vercel.app/
-
-💼 GitHub: https://github.com/batbyr-hub
+- LinkedIn: https://www.linkedin.com/in/batbayar-altanbagana/
+- GitHub: https://github.com/batbyr-hub
